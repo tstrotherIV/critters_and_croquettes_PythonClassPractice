@@ -5,203 +5,210 @@ from datetime import date
 
 
 class Sheep:
-    def __init__(self, name, species, date_added, location, walking):
+    def __init__(self, name, species, shift):
         self.name = name
         self.species = species
-        self.date_added = date_added
-        self.location = location
-        self.walking = walking
+        self.date_added = date.today()
+        self.location = "petting area"
+        self.walking = True,
+        self.shift = shift
 
 
-Sheepy = Sheep("Sheepness", "sheep", date.today(), "petting area", True)
+Sheepy = Sheep("Sheepness", "sheep", "morning'")
 print(Sheepy.name)
 
 
 class Goats:
-    def __init__(self, name, species, date_added, location, walking):
+    def __init__(self, name, species, shift):
         self.name = name
         self.species = species
-        self.date_added = date_added
-        self.location = location
-        self.walking = walking
+        self.date_added = date.today()
+        self.location = "petting area"
+        self.walking = True,
+        self.shift = shift
 
 
-Goatsy = Goats("John", "goat", date.today(), "petting area", True)
+Goatsy = Goats("John", "goat", "midday")
 print(Goatsy.name)
 
 
 class Rabbit:
-    def __init__(self, name, species, date_added, location, walking):
+    def __init__(self, name, species, shift):
         self.name = name
         self.species = species
-        self.date_added = date_added
-        self.location = location
-        self.walking = walking
+        self.date_added = date.today()
+        self.location = "petting area"
+        self.walking = True,
+        self.shift = shift
 
 
-Rabbity = Rabbit("Cotton", "rabbit", date.today(), "petting area", True)
+Rabbity = Rabbit("Cotton", "rabbit", "afternoon")
 print(Rabbity.name)
 
 
 class Ponies:
-    def __init__(self, name, species, date_added, location, walking):
+    def __init__(self, name, species, shift):
         self.name = name
         self.species = species
-        self.date_added = date_added
-        self.location = location
-        self.walking = walking
+        self.date_added = date.today()
+        self.location = "petting area"
+        self.walking = True,
+        self.shift = shift
 
 
-Ponytail = Ponies("Fred", "horse", date.today(), "petting area", True)
+Ponytail = Ponies("Fred", "horse", "midday")
 print(Ponytail.name)
 
 
 class Alpaca:
-    def __init__(self, name, species, date_added, location, walking):
+    def __init__(self, name, species, shift):
 
         self.name = name
         self.species = species
-        self.date_added = date_added
-        self.location = location
-        self.walking = walking
+        self.date_added = date.today()
+        self.location = "petting area"
+        self.walking = True,
+        self.shift = shift
 
 
-AlpacaMan = Alpaca("Sire", "alpaca", date.today(), "petting area", True)
+AlpacaMan = Alpaca("Sire", "alpaca", "morning")
 print(AlpacaMan.name)
-
+roberto = Alpaca("Roberto", "alpaca", "midday")
+print(f'{roberto.name} the {roberto.species} is available to pet during the {roberto.shift} shift.')
+# prints Roberto the alpaca is available to pet during the midday shift.
 
 # {Glass Tank: python, lizard, frog, cricket, salamander }
 
 
 class Python:
-    def __init__(self, name, species, date_added, location, slithering):
+    def __init__(self, name, species):
         self.name = name
         self.species = species
-        self.date_added = date_added
-        self.location = location
-        self.slithering = slithering
+        self.date_added = date.today()
+        self.location = "Glass Tank"
+        self.slithering = True
 
 
-Pythoness = Python("Slitherness", "snake", date.today(), "glass tank", True)
+Pythoness = Python("Slitherness", "snake")
 print(Pythoness.name)
 
 
 class Lizard:
-    def __init__(self, name, species, date_added, location, walking):
+    def __init__(self, name, species, shift):
         self.name = name
         self.species = species
-        self.date_added = date_added
-        self.location = location
-        self.walking = walking
+        self.date_added = date.today()
+        self.location = "Glass Tank"
+        self.shift = shift
 
 
-Lizardy = Lizard("Split", "reptile", date.today(), "glass tank", True)
+Lizardy = Lizard("Split", "reptile", "midday")
 print(Lizardy.name)
 
 
 class Frog:
-    def __init__(self, name, species, date_added, location, walking):
+    def __init__(self, name, species):
         self.name = name
         self.species = species
-        self.date_added = date_added
-        self.location = location
-        self.walking = walking
+        self.date_added = date.today()
+        self.location = "Glass Tank"
+        self.hopping = True
 
 
-FrogNer = Frog("Hoppy", "frog", date.today(), "glass tank", True)
+FrogNer = Frog("Hoppy", "frog")
 print(FrogNer.name)
 
 
 class Cricket:
-    def __init__(self, name, species, date_added, location, walking):
+    def __init__(self, name, species):
         self.name = name
         self.species = species
-        self.date_added = date_added
-        self.location = location
-        self.walking = walking
+        self.date_added = date.today()
+        self.location = "Glass Tank"
+        self.hopping = True
 
 
-JimminyCricket = Cricket("Jimminy", "cricket",
-                         date.today(), "glass tank", True)
+JimminyCricket = Cricket("Jimminy", "cricket")
 print(JimminyCricket.name)
 
 
 class Salamander:
-    def __init__(self, name, species, date_added, location, walking):
+    def __init__(self, name, species, shift):
         self.name = name
         self.species = species
-        self.date_added = date_added
-        self.location = location
-        self.walking = walking
+        self.date_added = date.today()
+        self.location = "Glass Tank"
+        self.walking = True
+        self.shift = shift
 
 
-YellowSalamander = Salamander("Wiggle", "salamander",
-                              date.today(), "glass tank", True)
+YellowSalamander = Salamander(
+    "Wiggle", "salamander", "afternoon")
 print(YellowSalamander.name)
 
 # {Pond: goldfish, watersnake, crawdad, catfish, leech}
 
 
 class Goldfish:
-    def __init__(self, name, species, date_added, location, swimming):
+    def __init__(self, name, species):
         self.name = name
         self.species = species
-        self.date_added = date_added
-        self.location = location
-        self.swimming = swimming
+        self.date_added = date.today()
+        self.location = "Pond"
+        self.swimming = True
 
 
-Goldy = Goldfish("Goldy", "fish", date.today(), "pond", True)
+Goldy = Goldfish("Goldy", "fish")
 print(Goldy.name)
 
 
 class Watersnake:
-    def __init__(self, name, species, date_added, location, swimming):
+    def __init__(self, name, species):
         self.name = name
         self.species = species
-        self.date_added = date_added
-        self.location = location
-        self.swimming = swimming
+        self.date_added = date.today()
+        self.location = "Pond"
+        self.swimming = True
 
 
-SSSS = Watersnake("Slimey", "snake", date.today(), "pond", True)
+SSSS = Watersnake("Slimey", "snake")
 print(SSSS.name)
 
 
 class Crawdad:
-    def __init__(self, name, species, date_added, location, swimming):
+    def __init__(self, name, species):
         self.name = name
         self.species = species
-        self.date_added = date_added
-        self.location = location
-        self.swimming = swimming
+        self.date_added = date.today()
+        self.location = "Pond"
+        self.swimming = True
 
 
-PinchyPinchy = Crawdad("Pinchy", "crustaceans", date.today(), "pond", True)
+PinchyPinchy = Crawdad("Pinchy", "crustaceans")
 print(PinchyPinchy.name)
 
 
 class Catfish:
-    def __init__(self, name, species, date_added, location, swimming):
+    def __init__(self, name, species):
         self.name = name
         self.species = species
-        self.date_added = date_added
-        self.location = location
-        self.swimming = swimming
+        self.date_added = date.today()
+        self.location = "Pond"
+        self.swimming = True
 
 
-MrSucker = Catfish("Whiskers", "fish", date.today(), "pond", True)
+MrSucker = Catfish("Whiskers", "fish")
 print(MrSucker.name)
 
 
 class Leech:
-    def __init__(self, name, species, date_added, location, swimming):
+    def __init__(self, name, species):
         self.name = name
         self.species = species
-        self.date_added = date_added
-        self.location = location
-        self.swimming = swimming
+        self.date_added = date.today()
+        self.location = "Pond"
+        self.swimming = True
 
 
-BlackLeech = Leech("Sucker", "gross", date.today(), "pond", True)
+BlackLeech = Leech("Sucker", "gross")
 print(BlackLeech.name)
