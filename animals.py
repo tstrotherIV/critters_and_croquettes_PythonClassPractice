@@ -348,3 +348,77 @@ BlackLeech = Leech("Sucker", "gross", "scum")
 print(BlackLeech.name)
 print(BlackLeech)
 print(BlackLeech.feed())
+
+
+# # Creating Attracions in the business
+# class PettingZoo:
+
+#     def __init__(self, name, description):
+#         self.attraction_name = name
+#         self.description = description
+#         self.animals = list()
+
+#     def add_animal(self, animals):
+#         self.animals.extend(animals)
+
+
+# class SnakePit:
+
+#     def __init__(self, name, description):
+#         self.attraction_name = name
+#         self.description = description
+#         self.animals = list()
+
+#     def add_animal(self, animals):
+#         self.animals.extend(animals)
+
+
+# class Wetlands:
+
+#     def __init__(self, name, description):
+#         self.attraction_name = name
+#         self.description = description
+#         self.animals = list()
+
+#     def add_animal(self, animals):
+#         self.animals.extend(animals)
+
+
+# PetPet = PettingZoo("PettingZoo", "area to pet animals")
+# Slitherland = SnakePit("Slitherland", "area to get bit")
+# WaterWorld = Wetlands(
+#     "WaterWorld", "explore the creatures that live in the wet world")
+
+# PetPet.add_animal([Sheepy, Goatsy, Rabbity, Ponytail, AlpacaMan])
+
+
+# def PetPetstr():
+#     print(f"PetPet is where you'll find all the wonderful things you can run away from: like:")
+#     for animal in PetPet.animals:
+#         print(f"  * {animal.name} the {animal.species}")
+
+
+# PetPetstr()
+
+# Slitherland.add_animal([Pythoness, SSSS])
+
+
+# def Slitherlandstr():
+#     print(f"Slitherland is where you'll find all the wonderful things you can pet: like:")
+#     for animal in Slitherland.animals:
+#         print(f"  * {animal.name} the {animal.species}")
+
+
+# Slitherlandstr()
+
+# WaterWorld.add_animal([Lizardy, FrogNer, JimminyCricket,
+#                        YellowSalamander, Goldy, PinchyPinchy, MrSucker, BlackLeech])
+
+
+# def WaterWorldstr():
+#     print(f"WaterWorld is where you'll find all the wonderful things that will slime you: like:")
+#     for animal in WaterWorld.animals:
+#         print(f"  * {animal.name} the {animal.species}")
+
+
+# WaterWorldstr()
