@@ -1,21 +1,38 @@
 from datetime import date
 # {Petting Area: sheep, goats, rabbits, ponies, alpacas} {Glass Tank: python, lizard, frog, cricket, salamander } {Pond: gold fish, watersnake, crawdad, catfish}
 
-# {Petting Area: sheep, goats, rabbits, ponies, alpacas}
 
-
-class Sheep:
-    def __init__(self, name, species, shift, food):
+class Animal:
+    def __init__(self, name, species, food):
         self.name = name
         self.species = species
-        self.date_added = date.today()
-        self.location = "petting area"
-        self.walking = True,
-        self.shift = shift
         self.food = food
+        # self.__chip_number = chip_num
+        self.date_added = date.today()
 
     def feed(self):
         print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
+
+    # @property
+    # def chip_number(self):
+    #     return self.__chip_number
+
+    # @chip_number.setter
+    # def chip_number(self, num):
+    #     pass
+
+
+# {Petting Area: sheep, goats, rabbits, ponies, alpacas}
+
+class Sheep(Animal):
+    def __init__(self, name, species, shift, food):
+        super().__init__(name, species, food)
+        self.location = "petting area"
+        self.walking = True,
+        self.shift = shift
+
+    def feed(self):
+        print(f'On {date.today().strftime("%m/%d/%Y")}, {self.name} had "Rockytop" sung to it so it would eat its {self.food}')
 
     def __str__(self):
         return f"{self.name} is a {self.species}"
@@ -25,18 +42,15 @@ Sheepy = Sheep("Sheepness", "sheep", "morning", "Sheep Chow")
 print(Sheepy.name)
 print(Sheepy)
 
-print(Sheepy.feed())
+Sheepy.feed()
 
 
-class Goats:
+class Goats(Animal):
     def __init__(self, name, species, shift, food):
-        self.name = name
-        self.species = species
-        self.date_added = date.today()
+        super().__init__(name, species, food)
         self.location = "petting area"
         self.walking = True,
         self.shift = shift
-        self.food = food
 
     def feed(self):
         print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
@@ -48,18 +62,15 @@ class Goats:
 Goatsy = Goats("John", "goat", "midday", "goolosh")
 print(Goatsy.name)
 print(Goatsy)
-print(Goatsy.feed())
+Goatsy.feed()
 
 
-class Rabbit:
+class Rabbit(Animal):
     def __init__(self, name, species, shift, food):
-        self.name = name
-        self.species = species
-        self.date_added = date.today()
+        super().__init__(name, species, food)
         self.location = "petting area"
         self.walking = True,
         self.shift = shift
-        self.food = food
 
     def feed(self):
         print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
@@ -71,18 +82,15 @@ class Rabbit:
 Rabbity = Rabbit("Cotton", "rabbit", "afternoon", "Rabit pellets")
 print(Rabbity.name)
 print(Rabbity)
-print(Rabbity.feed())
+Rabbity.feed()
 
 
-class Ponies:
+class Ponies(Animal):
     def __init__(self, name, species, shift, food):
-        self.name = name
-        self.species = species
-        self.date_added = date.today()
+        super().__init__(name, species, food)
         self.location = "petting area"
         self.walking = True,
         self.shift = shift
-        self.food = food
 
     def feed(self):
         print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
@@ -94,19 +102,15 @@ class Ponies:
 Ponytail = Ponies("Fred", "horse", "midday", "hay")
 print(Ponytail.name)
 print(Ponytail)
-print(Ponytail.feed())
+Ponytail.feed()
 
 
-class Alpaca:
+class Alpaca(Animal):
     def __init__(self, name, species, shift, food):
-
-        self.name = name
-        self.species = species
-        self.date_added = date.today()
+        super().__init__(name, species, food)
         self.location = "petting area"
         self.walking = True,
         self.shift = shift
-        self.food = food
 
     def feed(self):
         print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
@@ -120,20 +124,17 @@ print(AlpacaMan.name)
 roberto = Alpaca("Roberto", "alpaca", "midday", "alpacasauce")
 print(f'{roberto.name} the {roberto.species} is available to pet during the {roberto.shift} shift.')
 # prints Roberto the alpaca is available to pet during the midday shift.
-print(AlpacaMan.feed())
+AlpacaMan.feed()
 print(AlpacaMan)
 
 # {Glass Tank: python, lizard, frog, cricket, salamander }
 
 
-class Python:
+class Python(Animal):
     def __init__(self, name, species, food):
-        self.name = name
-        self.species = species
-        self.date_added = date.today()
+        super().__init__(name, species, food)
         self.location = "Glass Tank"
         self.slithering = True
-        self.food = food
 
     def feed(self):
         print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
@@ -145,17 +146,14 @@ class Python:
 Pythoness = Python("Slitherness", "snake", "crickets")
 print(Pythoness.name)
 print(Pythoness)
-print(Pythoness.feed())
+Pythoness.feed()
 
 
-class Lizard:
+class Lizard(Animal):
     def __init__(self, name, species, shift, food):
-        self.name = name
-        self.species = species
-        self.date_added = date.today()
+        super().__init__(name, species, food)
         self.location = "Glass Tank"
         self.shift = shift
-        self.food = food
 
     def feed(self):
         print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
@@ -170,14 +168,11 @@ print(Lizardy)
 print(Lizardy.feed())
 
 
-class Frog:
+class Frog(Animal):
     def __init__(self, name, species, food):
-        self.name = name
-        self.species = species
-        self.date_added = date.today()
+        super().__init__(name, species, food)
         self.location = "Glass Tank"
         self.hopping = True
-        self.food = food
 
     def feed(self):
         print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
@@ -189,17 +184,14 @@ class Frog:
 FrogNer = Frog("Hoppy", "frog", "crickets")
 print(FrogNer.name)
 print(FrogNer)
-print(FrogNer.feed())
+FrogNer.feed()
 
 
-class Cricket:
+class Cricket(Animal):
     def __init__(self, name, species, food):
-        self.name = name
-        self.species = species
-        self.date_added = date.today()
+        super().__init__(name, species, food)
         self.location = "Glass Tank"
         self.hopping = True
-        self.food = food
 
     def feed(self):
         print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
@@ -211,18 +203,15 @@ class Cricket:
 JimminyCricket = Cricket("Jimminy", "cricket", "ants")
 print(JimminyCricket.name)
 print(JimminyCricket)
-print(JimminyCricket.feed())
+JimminyCricket.feed()
 
 
-class Salamander:
+class Salamander(Animal):
     def __init__(self, name, species, shift, food):
-        self.name = name
-        self.species = species
-        self.date_added = date.today()
+        super().__init__(name, species, food)
         self.location = "Glass Tank"
         self.walking = True
         self.shift = shift
-        self.food = food
 
     def feed(self):
         print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
@@ -235,19 +224,16 @@ YellowSalamander = Salamander(
     "Wiggle", "salamander", "afternoon", "cricket")
 print(YellowSalamander.name)
 print(YellowSalamander)
-print(YellowSalamander.feed())
+YellowSalamander.feed()
 
 # {Pond: goldfish, watersnake, crawdad, catfish, leech}
 
 
-class Goldfish:
+class Goldfish(Animal):
     def __init__(self, name, species, food):
-        self.name = name
-        self.species = species
-        self.date_added = date.today()
+        super().__init__(name, species, food)
         self.location = "Pond"
         self.swimming = True
-        self.food = food
 
     def feed(self):
         print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
@@ -259,17 +245,14 @@ class Goldfish:
 Goldy = Goldfish("Goldy", "fish", "fish pellets")
 print(Goldy.name)
 print(Goldy)
-print(Goldy.feed())
+Goldy.feed()
 
 
-class Watersnake:
+class Watersnake(Animal):
     def __init__(self, name, species, food):
-        self.name = name
-        self.species = species
-        self.date_added = date.today()
+        super().__init__(name, species, food)
         self.location = "Pond"
         self.swimming = True
-        self.food = food
 
     def feed(self):
         print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
@@ -281,17 +264,14 @@ class Watersnake:
 SSSS = Watersnake("Slimey", "snake", "rat")
 print(SSSS.name)
 print(SSSS)
-print(SSSS.feed())
+SSSS.feed()
 
 
-class Crawdad:
+class Crawdad(Animal):
     def __init__(self, name, species, food):
-        self.name = name
-        self.species = species
-        self.date_added = date.today()
+        super().__init__(name, species, food)
         self.location = "Pond"
         self.swimming = True
-        self.food = food
 
     def feed(self):
         print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
@@ -303,17 +283,14 @@ class Crawdad:
 PinchyPinchy = Crawdad("Pinchy", "crustaceans", "fish")
 print(PinchyPinchy.name)
 print(PinchyPinchy)
-print(PinchyPinchy.feed())
+PinchyPinchy.feed()
 
 
-class Catfish:
+class Catfish(Animal):
     def __init__(self, name, species, food):
-        self.name = name
-        self.species = species
-        self.date_added = date.today()
+        super().__init__(name, species, food)
         self.location = "Pond"
         self.swimming = True
-        self.food = food
 
     def feed(self):
         print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
@@ -325,17 +302,14 @@ class Catfish:
 MrSucker = Catfish("Whiskers", "fish", "fish pellets")
 print(MrSucker.name)
 print(MrSucker)
-print(MrSucker.feed())
+MrSucker.feed()
 
 
-class Leech:
+class Leech(Animal):
     def __init__(self, name, species, food):
-        self.name = name
-        self.species = species
-        self.date_added = date.today()
+        super().__init__(name, species, food)
         self.location = "Pond"
         self.swimming = True
-        self.food = food
 
     def feed(self):
         print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
@@ -347,7 +321,7 @@ class Leech:
 BlackLeech = Leech("Sucker", "gross", "scum")
 print(BlackLeech.name)
 print(BlackLeech)
-print(BlackLeech.feed())
+BlackLeech.feed()
 
 
 # # Creating Attracions in the business
