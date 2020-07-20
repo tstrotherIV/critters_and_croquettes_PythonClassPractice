@@ -52,9 +52,6 @@ class Goats(Animal):
         self.walking = True,
         self.shift = shift
 
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
-
     def __str__(self):
         return f"{self.name} is a {self.species}"
 
@@ -71,9 +68,6 @@ class Rabbit(Animal):
         self.location = "petting area"
         self.walking = True,
         self.shift = shift
-
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
 
     def __str__(self):
         return f"{self.name} is a {self.species}"
@@ -92,9 +86,6 @@ class Ponies(Animal):
         self.walking = True,
         self.shift = shift
 
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
-
     def __str__(self):
         return f"{self.name} is a {self.species}"
 
@@ -111,9 +102,6 @@ class Alpaca(Animal):
         self.location = "petting area"
         self.walking = True,
         self.shift = shift
-
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
 
     def __str__(self):
         return f"{self.name} is a {self.species}"
@@ -136,9 +124,6 @@ class Python(Animal):
         self.location = "Glass Tank"
         self.slithering = True
 
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
-
     def __str__(self):
         return f"{self.name} is a {self.species}"
 
@@ -154,9 +139,6 @@ class Lizard(Animal):
         super().__init__(name, species, food)
         self.location = "Glass Tank"
         self.shift = shift
-
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
 
     def __str__(self):
         return f"{self.name} is a {self.species}"
@@ -174,9 +156,6 @@ class Frog(Animal):
         self.location = "Glass Tank"
         self.hopping = True
 
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
-
     def __str__(self):
         return f"{self.name} is a {self.species}"
 
@@ -192,9 +171,6 @@ class Cricket(Animal):
         super().__init__(name, species, food)
         self.location = "Glass Tank"
         self.hopping = True
-
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
 
     def __str__(self):
         return f"{self.name} is a {self.species}"
@@ -212,9 +188,6 @@ class Salamander(Animal):
         self.location = "Glass Tank"
         self.walking = True
         self.shift = shift
-
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
 
     def __str__(self):
         return f"{self.name} is a {self.species}"
@@ -235,9 +208,6 @@ class Goldfish(Animal):
         self.location = "Pond"
         self.swimming = True
 
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
-
     def __str__(self):
         return f"{self.name} is a {self.species}"
 
@@ -253,9 +223,6 @@ class Watersnake(Animal):
         super().__init__(name, species, food)
         self.location = "Pond"
         self.swimming = True
-
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
 
     def __str__(self):
         return f"{self.name} is a {self.species}"
@@ -274,7 +241,8 @@ class Crawdad(Animal):
         self.swimming = True
 
     def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
+        print(
+            f"{self.name} sat on a rock underwater listening to Lynyrd Skynyrd and ate {self.food}.")
 
     def __str__(self):
         return f"{self.name} is a {self.species}"
@@ -291,9 +259,6 @@ class Catfish(Animal):
         super().__init__(name, species, food)
         self.location = "Pond"
         self.swimming = True
-
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
 
     def __str__(self):
         return f"{self.name} is a {self.species}"
@@ -312,13 +277,13 @@ class Leech(Animal):
         self.swimming = True
 
     def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
+        print(f'On {date.today().strftime("%m/%d/%Y")}, {self.name} crawled on a unsuspecting hippo and ate {self.food}')
 
     def __str__(self):
         return f"{self.name} is a {self.species}"
 
 
-BlackLeech = Leech("Sucker", "gross", "scum")
+BlackLeech = Leech("Sucker", "gross", "...you know")
 print(BlackLeech.name)
 print(BlackLeech)
 BlackLeech.feed()
