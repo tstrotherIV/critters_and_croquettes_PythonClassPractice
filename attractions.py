@@ -26,6 +26,10 @@ class PettingZoo:
     def add_animal(self, animals):
         self.animals.extend(animals)
 
+    @property
+    def last_critter_added(self):
+        return f'{self.animals[-1]}'
+
 
 class SnakePit:
 
@@ -60,3 +64,5 @@ Slitherland.add_animal([Pythoness, SSSS])
 
 WaterWorld.add_animal([Lizardy, FrogNer, JimminyCricket,
                        YellowSalamander, Goldy, PinchyPinchy, MrSucker, BlackLeech])
+
+print(PetPet.last_critter_added)
