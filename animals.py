@@ -3,30 +3,30 @@ from datetime import date
 
 
 class Animal:
-    def __init__(self, name, species, food):
+    def __init__(self, name, species, food, chip_num):
         self.name = name
         self.species = species
         self.food = food
-        # self.__chip_number = chip_num
+        self.__chip_number = chip_num
         self.date_added = date.today()
 
     def feed(self):
         print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
 
-    # @property
-    # def chip_number(self):
-    #     return self.__chip_number
+    @property
+    def chip_number(self):
+        return self.__chip_number
 
-    # @chip_number.setter
-    # def chip_number(self, num):
-    #     pass
+    @chip_number.setter
+    def chip_number(self, num):
+        pass
 
 
 # {Petting Area: sheep, goats, rabbits, ponies, alpacas}
 
 class Sheep(Animal):
-    def __init__(self, name, species, shift, food):
-        super().__init__(name, species, food)
+    def __init__(self, name, species, shift, food, chip_num):
+        super().__init__(name, species, food, chip_num)
         self.location = "petting area"
         self.walking = True,
         self.shift = shift
@@ -38,16 +38,17 @@ class Sheep(Animal):
         return f"{self.name} is a {self.species}"
 
 
-Sheepy = Sheep("Sheepness", "sheep", "morning", "Sheep Chow")
+Sheepy = Sheep("Sheepness", "sheep", "morning", "Sheep Chow", 1)
 print(Sheepy.name)
 print(Sheepy)
+# print(Sheepy.chip_number)
 
 Sheepy.feed()
 
 
 class Goats(Animal):
-    def __init__(self, name, species, shift, food):
-        super().__init__(name, species, food)
+    def __init__(self, name, species, shift, food, chip_num):
+        super().__init__(name, species, food, chip_num)
         self.location = "petting area"
         self.walking = True,
         self.shift = shift
@@ -56,15 +57,15 @@ class Goats(Animal):
         return f"{self.name} is a {self.species}"
 
 
-Goatsy = Goats("John", "goat", "midday", "goolosh")
+Goatsy = Goats("John", "goat", "midday", "goolosh", 2)
 print(Goatsy.name)
 print(Goatsy)
 Goatsy.feed()
 
 
 class Rabbit(Animal):
-    def __init__(self, name, species, shift, food):
-        super().__init__(name, species, food)
+    def __init__(self, name, species, shift, food, chip_num):
+        super().__init__(name, species, food, chip_num)
         self.location = "petting area"
         self.walking = True,
         self.shift = shift
@@ -73,15 +74,15 @@ class Rabbit(Animal):
         return f"{self.name} is a {self.species}"
 
 
-Rabbity = Rabbit("Cotton", "rabbit", "afternoon", "Rabit pellets")
+Rabbity = Rabbit("Cotton", "rabbit", "afternoon", "Rabit pellets", 3)
 print(Rabbity.name)
 print(Rabbity)
 Rabbity.feed()
 
 
 class Ponies(Animal):
-    def __init__(self, name, species, shift, food):
-        super().__init__(name, species, food)
+    def __init__(self, name, species, shift, food, chip_num):
+        super().__init__(name, species, food, chip_num)
         self.location = "petting area"
         self.walking = True,
         self.shift = shift
@@ -90,15 +91,15 @@ class Ponies(Animal):
         return f"{self.name} is a {self.species}"
 
 
-Ponytail = Ponies("Fred", "horse", "midday", "hay")
+Ponytail = Ponies("Fred", "horse", "midday", "hay", 4)
 print(Ponytail.name)
 print(Ponytail)
 Ponytail.feed()
 
 
 class Alpaca(Animal):
-    def __init__(self, name, species, shift, food):
-        super().__init__(name, species, food)
+    def __init__(self, name, species, shift, food, chip_num):
+        super().__init__(name, species, food, chip_num)
         self.location = "petting area"
         self.walking = True,
         self.shift = shift
@@ -107,9 +108,9 @@ class Alpaca(Animal):
         return f"{self.name} is a {self.species}"
 
 
-AlpacaMan = Alpaca("Sire", "alpaca", "morning", "alpacasauce")
+AlpacaMan = Alpaca("Sire", "alpaca", "morning", "alpacasauce", 5)
 print(AlpacaMan.name)
-roberto = Alpaca("Roberto", "alpaca", "midday", "alpacasauce")
+roberto = Alpaca("Roberto", "alpaca", "midday", "alpacasauce", 5)
 print(f'{roberto.name} the {roberto.species} is available to pet during the {roberto.shift} shift.')
 # prints Roberto the alpaca is available to pet during the midday shift.
 AlpacaMan.feed()
@@ -119,8 +120,8 @@ print(AlpacaMan)
 
 
 class Python(Animal):
-    def __init__(self, name, species, food):
-        super().__init__(name, species, food)
+    def __init__(self, name, species, food, chip_num):
+        super().__init__(name, species, food, chip_num)
         self.location = "Glass Tank"
         self.slithering = True
 
@@ -128,15 +129,15 @@ class Python(Animal):
         return f"{self.name} is a {self.species}"
 
 
-Pythoness = Python("Slitherness", "snake", "crickets")
+Pythoness = Python("Slitherness", "snake", "crickets", 6)
 print(Pythoness.name)
 print(Pythoness)
 Pythoness.feed()
 
 
 class Lizard(Animal):
-    def __init__(self, name, species, shift, food):
-        super().__init__(name, species, food)
+    def __init__(self, name, species, shift, food, chip_num):
+        super().__init__(name, species, food, chip_num)
         self.location = "Glass Tank"
         self.shift = shift
 
@@ -144,15 +145,15 @@ class Lizard(Animal):
         return f"{self.name} is a {self.species}"
 
 
-Lizardy = Lizard("Split", "reptile", "midday", "crickets")
+Lizardy = Lizard("Split", "reptile", "midday", "crickets", 7)
 print(Lizardy.name)
 print(Lizardy)
 print(Lizardy.feed())
 
 
 class Frog(Animal):
-    def __init__(self, name, species, food):
-        super().__init__(name, species, food)
+    def __init__(self, name, species, food, chip_num):
+        super().__init__(name, species, food, chip_num)
         self.location = "Glass Tank"
         self.hopping = True
 
@@ -160,15 +161,15 @@ class Frog(Animal):
         return f"{self.name} is a {self.species}"
 
 
-FrogNer = Frog("Hoppy", "frog", "crickets")
+FrogNer = Frog("Hoppy", "frog", "crickets", 8)
 print(FrogNer.name)
 print(FrogNer)
 FrogNer.feed()
 
 
 class Cricket(Animal):
-    def __init__(self, name, species, food):
-        super().__init__(name, species, food)
+    def __init__(self, name, species, food, chip_num):
+        super().__init__(name, species, food, chip_num)
         self.location = "Glass Tank"
         self.hopping = True
 
@@ -176,15 +177,15 @@ class Cricket(Animal):
         return f"{self.name} is a {self.species}"
 
 
-JimminyCricket = Cricket("Jimminy", "cricket", "ants")
+JimminyCricket = Cricket("Jimminy", "cricket", "ants", 9)
 print(JimminyCricket.name)
 print(JimminyCricket)
 JimminyCricket.feed()
 
 
 class Salamander(Animal):
-    def __init__(self, name, species, shift, food):
-        super().__init__(name, species, food)
+    def __init__(self, name, species, shift, food, chip_num):
+        super().__init__(name, species, food, chip_num)
         self.location = "Glass Tank"
         self.walking = True
         self.shift = shift
@@ -194,7 +195,7 @@ class Salamander(Animal):
 
 
 YellowSalamander = Salamander(
-    "Wiggle", "salamander", "afternoon", "cricket")
+    "Wiggle", "salamander", "afternoon", "cricket", 10)
 print(YellowSalamander.name)
 print(YellowSalamander)
 YellowSalamander.feed()
@@ -203,8 +204,8 @@ YellowSalamander.feed()
 
 
 class Goldfish(Animal):
-    def __init__(self, name, species, food):
-        super().__init__(name, species, food)
+    def __init__(self, name, species, food, chip_num):
+        super().__init__(name, species, food, chip_num)
         self.location = "Pond"
         self.swimming = True
 
@@ -212,15 +213,15 @@ class Goldfish(Animal):
         return f"{self.name} is a {self.species}"
 
 
-Goldy = Goldfish("Goldy", "fish", "fish pellets")
+Goldy = Goldfish("Goldy", "fish", "fish pellets", 11)
 print(Goldy.name)
 print(Goldy)
 Goldy.feed()
 
 
 class Watersnake(Animal):
-    def __init__(self, name, species, food):
-        super().__init__(name, species, food)
+    def __init__(self, name, species, food, chip_num):
+        super().__init__(name, species, food, chip_num)
         self.location = "Pond"
         self.swimming = True
 
@@ -228,15 +229,15 @@ class Watersnake(Animal):
         return f"{self.name} is a {self.species}"
 
 
-SSSS = Watersnake("Slimey", "snake", "rat")
+SSSS = Watersnake("Slimey", "snake", "rat", 12)
 print(SSSS.name)
 print(SSSS)
 SSSS.feed()
 
 
 class Crawdad(Animal):
-    def __init__(self, name, species, food):
-        super().__init__(name, species, food)
+    def __init__(self, name, species, food, chip_num):
+        super().__init__(name, species, food, chip_num)
         self.location = "Pond"
         self.swimming = True
 
@@ -248,15 +249,15 @@ class Crawdad(Animal):
         return f"{self.name} is a {self.species}"
 
 
-PinchyPinchy = Crawdad("Pinchy", "crustaceans", "fish")
+PinchyPinchy = Crawdad("Pinchy", "crustaceans", "fish", 13)
 print(PinchyPinchy.name)
 print(PinchyPinchy)
 PinchyPinchy.feed()
 
 
 class Catfish(Animal):
-    def __init__(self, name, species, food):
-        super().__init__(name, species, food)
+    def __init__(self, name, species, food, chip_num):
+        super().__init__(name, species, food, chip_num)
         self.location = "Pond"
         self.swimming = True
 
@@ -264,15 +265,15 @@ class Catfish(Animal):
         return f"{self.name} is a {self.species}"
 
 
-MrSucker = Catfish("Whiskers", "fish", "fish pellets")
+MrSucker = Catfish("Whiskers", "fish", "fish pellets", 14)
 print(MrSucker.name)
 print(MrSucker)
 MrSucker.feed()
 
 
 class Leech(Animal):
-    def __init__(self, name, species, food):
-        super().__init__(name, species, food)
+    def __init__(self, name, species, food, chip_num):
+        super().__init__(name, species, food, chip_num)
         self.location = "Pond"
         self.swimming = True
 
@@ -283,7 +284,7 @@ class Leech(Animal):
         return f"{self.name} is a {self.species}"
 
 
-BlackLeech = Leech("Sucker", "gross", "...you know")
+BlackLeech = Leech("Sucker", "gross", "...you know", 15)
 print(BlackLeech.name)
 print(BlackLeech)
 BlackLeech.feed()
