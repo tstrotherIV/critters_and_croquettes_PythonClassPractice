@@ -71,20 +71,20 @@ bob.run()
 
 
 # building areas
-varmint_village = PettingZoo(
-    "Varmint Village", "critters that like to dig and scurry")
-varmint_village.add_animal([bob, Sheepy])
+# varmint_village = PettingZoo(
+#     "Varmint Village", "critters that like to dig and scurry")
+# varmint_village.add_animal([Sheepy])
 
-for animal in varmint_village.animals:
-    print(animal)
+# for animal in varmint_village.animals:
+#     print(animal)
 
-PetPet = PettingZoo("PettingZoo", "area to pet animals")
-PetPet.add_animal([Sheepy, Goatsy, Rabbity, Ponytail, AlpacaMan])
+# PetPet = PettingZoo("PettingZoo", "area to pet animals")
+# PetPet.add_animal([Sheepy, Goatsy, Rabbity, Ponytail, AlpacaMan])
 
-Slitherland = SnakePit("Slitherland", "area to get bit")
-Slitherland.add_animal([Pythoness, SSSS])
+# Slitherland = SnakePit("Slitherland", "area to get bit")
+# Slitherland.add_animal([Pythoness, SSSS])
 
-WaterWorld = Wetlands(
-    "WaterWorld", "explore the creatures that live in the wet world")
-WaterWorld.add_animal([Lizardy, FrogNer, JimminyCricket,
-                       YellowSalamander, Goldy, PinchyPinchy, MrSucker, BlackLeech])
+# WaterWorld = Wetlands(
+#     "WaterWorld", "explore the creatures that live in the wet world")
+# WaterWorld.add_animal([Lizardy, FrogNer, JimminyCricket,
+#                        YellowSalamander, Goldy, PinchyPinchy, MrSucker, BlackLeech])
